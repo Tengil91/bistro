@@ -1,0 +1,167 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    scroll-behavior: smooth;
+}
+#home::after {
+    background-image: url(images/restaurant.jpg);
+}
+#menu::after {
+    background-image: url(images/tables.jpg);
+}
+#images::after {
+    background-image: url(images/header.jpg);
+}
+#contact::after {
+    background-image: url(images/kitchen.jpg);
+}
+#carouselcomponent {
+    padding: 20px 10%; 
+}
+#navigationheader {
+    position: fixed;
+    z-index: 3;
+    bottom: 0;
+    text-align: left;
+    width: 40%;
+}
+nav a, nav p, #burger {
+    background-color: #000;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 28px;
+    margin: 0;
+    color: #c4a;
+    display: block;
+}
+h2.sectionbreaker {
+    background-image: linear-gradient(45deg, #000, #c4a, #000, #c4a, #000);
+    padding: 30px;
+    color: #c4a;
+    box-shadow: 10px 0px 20px #222;
+}
+#home h1 {
+    padding-top: 30vh;
+    color: #c4a;
+    text-shadow: black 2px 2px 5px;
+    font-size: 64px;
+}
+label {
+    display: block;
+}
+.col-container {
+    display: table;
+    width: 100%;
+    border-spacing: 20px;
+}
+.col {
+    border: black 1px solid;
+    display: table-cell;
+    width: 50%;
+    background-color: #fff;
+    box-shadow: 10px 10px 20px #444; 
+}
+
+.menupic, .randompic {
+    background-size: cover;
+    background-position: center;
+    padding: 20% 10% 10px 10%;
+    display: inline-block;
+    margin: 20px;
+    border-radius: 5%;
+    box-shadow: 10px 10px 20px #222; 
+}
+.menupic h2, .randompic h2 {
+    background-color: #000000bb;
+    width: 200px;
+    color: #c4a;
+    font-family: sans-serif;
+}
+.menupic {
+    background-image: url('images/menu.jpg');
+}
+.randompic {
+    background-image: url('images/random.jpg');
+}
+
+/* paralaxgrejer */
+
+.wrapper {
+    height: 100vh;
+    overflow-y: auto;
+    perspective: 2px;
+}
+
+section.content {
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+section.content::after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateZ(-1px) scale(1.5);
+    background-size: cover;
+    z-index: -1;
+}
+/* paralaxgrejer slut */
+
+#captcha, input, form a {
+    display: block;
+    width: fit-content;
+    margin: auto;
+}
+
+/* Hamburgargrejer */
+nav p, #burger {
+    width: 100%;
+}
+#navigationheader {
+    left: -40%;
+}
+#burger {
+    text-align: left;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 4;
+    background-image: linear-gradient(-45deg, #000, #c4a, #000, #c4a, #000);
+}
+#darkness {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: #00000055;
+    width: 100vw;
+    height: 100vh;
+}
+
+@media (max-width: 600px){
+    .col-container {
+        display: block;
+    }
+    .col {
+        border: black 1px solid;
+        display: block;
+        width: 80%;
+        background-color: #fff;
+        box-shadow: 10px 10px 20px #444; 
+        margin: 20px auto;
+    }
+    #contact {
+        height: 150vh;
+    }
+    #navigationheader {
+        width: 100%;
+        left: -100%;
+    }
+}

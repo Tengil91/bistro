@@ -1,0 +1,65 @@
+.carouselcenterimage {
+    width: 48%;
+    z-index: 3;
+    display: inline;
+    position: absolute;
+    left: 26%;
+    top: 2%;
+    box-shadow: 10px 10px 20px #444;
+}
+.carouselleftimage {
+    width: 25%;
+    z-index: 2;
+    display: inline;
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    box-shadow: 5px 5px 10px #444;
+}
+.carouselrightimage {
+    width: 25%;
+    z-index: 2;
+    display: inline;
+    position: absolute;
+    right: 10%;
+    top: 25%;
+    box-shadow: 5px 5px 10px #444;
+}
+.carouselforwardbutton {
+    width: 10%;
+    position: absolute;
+    right: 0;
+    top: 40%
+}
+.carouselbackwardbutton {
+    width: 10%;
+    position: absolute;
+    left: 0;
+    top: 40%;
+}
+
+.carouselcontainer {
+    background-color: #000;
+    position: relative;
+    width: 80%;
+    margin: auto;
+    box-shadow: 10px 10px 20px #222;
+}
+.carouseldescription {
+    color: #fff;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+}
+@media (max-width: 700px){
+    .carouselcenterimage {
+        width: 70%;
+        left: 15%;
+    }
+    .carouselleftimage {
+        display: none;
+    }
+    .carouselrightimage {
+        display: none;
+    }
+}
